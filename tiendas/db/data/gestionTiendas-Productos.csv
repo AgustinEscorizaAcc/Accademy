@@ -1,0 +1,6 @@
+ID;nombre;cantidad;moneda_code;precio;min;max
+"93e0891a-efad-42ea-83af-afb664eef4e1";"Product 1";270;"EU";14.2;5;200
+"cc2aa806-15bb-423b-be0f-1a4329be619c";"Product 2";170;"EU";15.2;5;200
+"b54d6d91-0f04-47fa-afc6-0bb4090ba3d5";"Product 3";470;"EU";12.2;5;200
+"bda3b6eb-ff00-4f6c-8df4-a1639c7ea73f";"Product 4";370;"EU";11.2;5;200
+"6d6cd408-3c21-40da-9946-4f1d64d17085";"Product 5";770;"EU";16.2;5;200
