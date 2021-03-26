@@ -1,6 +1,6 @@
 using {miLibrary as my} from '../db/schema';
 
-service api @(require:'scope'){
+@(path:'/gen')service general @(require:'scope'){
 
     entity Books    as
         select from my.Books {*};
@@ -8,8 +8,15 @@ service api @(require:'scope'){
     entity Authors  as
         select from my.Authors {*};
 }
+@(path:'/autenticado')service autenticado @(require:'authenticated-user'){
 
-service admin @(require:'scope2'){
+    entity Books    as
+        select from my.Books {*};
+
+    entity Authors  as
+        select from my.Authors {*};
+}
+@(path:'/administrador')service administrador @(require:'admin'){
 
     entity Books    as
         select from my.Books {*};

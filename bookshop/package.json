@@ -9,6 +9,8 @@
     "@sap/cds": "^4",
     "@sap/hana-client": "^2.7.26",
     "@sap/xssec": "^3.1.2",
+    "@sap/xsenv": "^3.0.0",
+    "passport": "^0.4.1",
     "express": "^4"
   },
   "devDependencies": {
@@ -22,12 +24,24 @@
       "deploy-format": "hdbtable"
     },
     "requires": {
+      "auth": {
+        "strategy": "mock",
+        "Moi": {
+            "password": "123",
+            "roles": [
+              "scope"
+            ]
+          }
+      },
       "db": {
-        "kind": "sql",
+        "kind": "hana",
         "model": [
           "db",
           "srv"
         ]
+      },
+      "uaa":{
+        "kind":"xsuaa"
       }
     },
     "odata": {

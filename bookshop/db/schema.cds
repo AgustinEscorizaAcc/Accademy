@@ -6,7 +6,8 @@ using {
 
 namespace miLibrary;
 
-entity Books : cuid {
+entity Books {
+    key ID : Integer;
     name     : String(111);
     author   : Association to Authors;
 }
