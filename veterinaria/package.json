@@ -7,6 +7,8 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^4",
+    "@sap/hana-client": "^2.7.26",
+    "@sap/xssec": "^3.1.2",
     "express": "^4"
   },
   "devDependencies": {
@@ -14,5 +16,22 @@
   },
   "scripts": {
     "start": "cds run"
+  },
+  "cds": {
+    "hana": {
+      "deploy-format": "hdbtable"
+    },
+    "requires": {
+      "db": {
+        "kind": "hana",
+        "model": [
+          "db",
+          "srv"
+        ]
+      }
+    },
+    "odata": {
+      "version": "v4"
+    }
   }
 }

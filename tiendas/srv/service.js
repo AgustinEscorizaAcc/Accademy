@@ -69,8 +69,8 @@ module.exports = cds.service.impl(async (srv)=>{
                 tiendasProductos.forEach(element =>{
                     let vStock = element.stock + cantidad; //Stock es lo que quiero sumar en tienda_Productos
                     vCantidad = vCantidad - cantidad;  //vCantidad es cantidad que tengo en productos
-                    if(vStock >= producto.min){
-                        if(vStock <= producto.max){
+                    if(vStock >= producto.minimo){
+                        if(vStock <= producto.maximo){
                             if(vCantidad >= 0){
                                 element.stock = vStock;
 
@@ -81,7 +81,7 @@ module.exports = cds.service.impl(async (srv)=>{
                             console.log("me pase del maximo");
                         }
                     }else{
-                        console.log("no llego al minimo")
+                        console.log("no llego al minimoimo")
                     }
                 });
 

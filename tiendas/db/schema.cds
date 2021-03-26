@@ -24,9 +24,9 @@ entity Tiendas : cuid{
 
 entity Productos : cuid, Precio{
     nombre : String;
-    min : Integer; //que puede tener cada tienda, ej: una tienda no puede tener una leche
+    minimo : Integer; //que puede tener cada tienda, ej: una tienda no puede tener una leche
     cantidad: Integer; //Cantidad de productos disponibles
-    max : Integer; //que puede tener cada tienda. EJ: una tienda no puede tener 600 leches
+    maximo : Integer; //que puede tener cada tienda. EJ: una tienda no puede tener 600 leches
     tiendas : Association to many Tiendas_Productos on tiendas.producto = $self;
     marca : Association to Marcas;
 }

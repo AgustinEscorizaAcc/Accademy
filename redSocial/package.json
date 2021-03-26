@@ -7,6 +7,7 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^4",
+    "@sap/hana-client": "2.6.61",
     "express": "^4"
   },
   "devDependencies": {
@@ -14,5 +15,19 @@
   },
   "scripts": {
     "start": "cds run"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "hana",
+        "model": [
+          "db",
+          "srv"
+        ]
+      }
+    },
+    "odata": {
+      "version": "v4"
+    }
   }
 }
